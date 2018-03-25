@@ -28,7 +28,6 @@ class Test_Factorial(unittest.TestCase):
         try:
             out, errors = proc.communicate()
             self.assertTrue( errors == None )
-            print( out )
         except:
             proc.kill()
             self.assertTrue(False)
@@ -42,11 +41,9 @@ class Test_Factorial(unittest.TestCase):
             stdout=subprocess.PIPE)
         try:
             out, errors = proc.communicate()
-            print("MY output: {}".format(out))
             temp = int(out)
-            self.assertTrue( temp == 0 )
+            self.assertTrue( temp == 1 )
             self.assertTrue( errors == None )
-            print( out )
         except Exception as e:
             print(e)
             proc.kill()
