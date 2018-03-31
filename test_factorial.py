@@ -53,7 +53,7 @@ class Test_Factorial(unittest.TestCase):
         print("Test started: {}".format(inspect.stack()[0][3]))
         self.assertTrue(self.has_file, 
                 "File: 'fact.py' required")
-        proc = subprocess.Popen(["python3", "fact.py", "0"],\
+        proc = subprocess.Popen(["python3", "fact.py", "2"],\
             stdout=subprocess.PIPE)
         try:
             out, errors = proc.communicate()
@@ -69,7 +69,7 @@ class Test_Factorial(unittest.TestCase):
         print("Test started: {}".format(inspect.stack()[0][3]))
         self.assertTrue(self.has_file, 
                 "File: 'fact.py' required")
-        proc = subprocess.Popen(["python3", "fact.py", "0"],\
+        proc = subprocess.Popen(["python3", "fact.py", "6"],\
             stdout=subprocess.PIPE)
         try:
             out, errors = proc.communicate()
